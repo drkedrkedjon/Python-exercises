@@ -19,7 +19,7 @@ my_dictionary = {
 my_ceil = math.ceil(my_decimal)
 
 # Exercise 3: Get the square root of your float.
-math.sqrt(my_ceil)
+math.sqrt(my_float)
 
 # Exercise 4: Select the first element from your dictionary.
 primer_elemento = my_dictionary["españa"]
@@ -33,8 +33,7 @@ my_list.append("four")
 my_list.extend(["fifth"])
 
 # Exercise 7: Replace the first element in your list.
-my_list[1] = "hahaha"
-my_list.insert(0, "largate de aqui")
+my_list[0] = "hahaha"
 
 # Exercise 8: Sort your list alphabetically.
 my_list.sort()
