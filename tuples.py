@@ -29,7 +29,9 @@ arr_tuple = list(mi_tuple)
 arr_tuple.pop(2)
 mi_tuple = tuple(arr_tuple)
 print(mi_tuple)
-#--------- 
+
+#--------- Usar un tuple como una KEY en un dictionario
+
 
 #--------- 
 
