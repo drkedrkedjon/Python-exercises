@@ -55,3 +55,12 @@ def game():
 # game()
 
 # -------------- Combine & flatten LISTS con FOR/IN loop.
+old = ["Caty", "Sasa"]
+new = ["Simba", "Kobu"]
+
+for cust in old:
+  new.append(cust)
+print(new)
+# Same can be acomplished using new.extend(old)
+old.extend(new)
+print(old)
