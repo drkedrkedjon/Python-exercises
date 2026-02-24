@@ -1,3 +1,4 @@
+import math
 ############### LOOPS EN PYTHON
 
 # -------------- FOR .. IN loop. Sirve para tuples, lists, dictionarios...
@@ -64,3 +65,8 @@ print(new)
 # Same can be acomplished using new.extend(old)
 old.extend(new)
 print(old)
+
+# -------------- Using list comprehension in PY
+# Si el numero es par haz cuadrado y guarda en numbers array
+numbers = [ int(math.pow(number, 2)) for number in range(1,11) if number % 2 == 0]
+print(numbers)
