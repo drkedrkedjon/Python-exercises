@@ -15,8 +15,10 @@ role = "admin"
 auth = "Puede ver panel" if role == "admin" else "No puedes ver el panel idiota"
 print(auth)
 # -------- Full list of conditional operators
-# ==, !=, >, >=, <, <=.
-
+# ==, !=, >, >=, <, <= --> tambien hay IS que es parecido a === en JS
+uno = []
+dos = []
+print(uno is dos)
 
 
 # --------
