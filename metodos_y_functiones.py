@@ -14,7 +14,7 @@ def printer(arg1, arg2):
 
 printer("Hola", "Caracola")
 
-# -------- Default arguments in JS
+# -------- Default arguments in PY
 def feee (arg = "FALTA ARGUMENTO IDIOTA"): # Same as in JS
   print(arg)
 feee("sasa")
@@ -27,18 +27,28 @@ def funct(arg = []):
 print(funct())
 print(funct())
 
+# -------- Named arguments in PY
 # Named arguments no tienen estar en orden de argumentos en la function, escribiendo asi se asignan corectamente.
 def fuuuunct(apellido, nombre ):
   print(f"{nombre} {apellido}")
 
 fuuuunct(nombre = "Sasa", apellido = "Gonzales")
 
+# -------- Unpacking function argument (rest operator *) - cuando tienes desconocido el numero de argumentos
+def greeting(*args): # Comon costumbre en PY es llamar ARGS. EN JS: "function greeting(...args){}" usando parametro rest ...
+  print("Hi " + " ".join(args))
+
+greeting("Sasa", "Savic", "Perusina", "Pendejon")
+
+# -------- Named arguments unidos con el rest "JS" operator (Unpacking arguments)
+def greeet(**kwargs):
+  if kwargs:
+    print(f"Hi {kwargs["first"]} el peo viejo de la familija {kwargs["second"]}")
+  else:
+    print("Ups, shit happens")
+greeet(first = "Sasa", second="Savichi")
 
 # -------- 
-
-# --------
-
-# --------
 
 # --------
 
