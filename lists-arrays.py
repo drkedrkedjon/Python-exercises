@@ -13,7 +13,7 @@ users[3] = "Pepe"
 #--------- Remove items in array/list
 users.remove("Sasa")
 poped_user = users.pop() # quita el ultimo o si pones .pop(0) quita el primero o cualquier index (index)
-users[1:-1] # Removes only first y el ultimo de array  y retorna una nueva lista. Como si aplico pop() & shift() en JS
+users[1:-1] # Removes only first y el ultimo de array y retorna una nueva lista. Como si aplico pop() & shift() en JS
 del users[1]
 # print(users)
 
@@ -96,7 +96,7 @@ def random_winner(setings):
 #--------- Qutar el primer y el ultimo elemento y retornar una nueva lista usando sa destructuracion en PY
 mi_arr = ["<h1>", "Titulo de la pagina", "subtitulo", "</h1>"]
 def clean(par):
-  _, *el_resto, _ = par # *el_resto equivalent is ...el_resto in JS
+  _, *el_resto, _ = par # *el_resto equivalent in JS is: ...el_resto
   return el_resto
 
 print(clean(mi_arr))
