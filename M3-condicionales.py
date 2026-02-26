@@ -32,4 +32,22 @@ if 5 in nums:
   print("Esta")
 else:
   print("No esta")
-# --------
+
+# -------- Compound conditionals in PY
+username = "sasa"
+email = "sa@sa.com"
+password = "123"
+
+if username == "sasa" and password == "123": # Eqvivalente de AND en JS es: &&
+  print("yes")
+
+if (username == "sasa" or email == "sa@sa.com") and password == "123": # Eqvivalente de OR en JS es: ||
+  print("yes")
+
+logged_inn = True
+admin = False
+if logged_inn and not admin: # NOT is bangada in JS !varName
+  print("YES")
+else:
+  print("NO")
+
