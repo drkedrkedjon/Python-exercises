@@ -11,8 +11,17 @@ print(greeting("Sasha"))
 print(modulos.helper.greeting("Sasha"))
 print(modulos.helper.shitting("Sasha"))
 
-# ---------- Install NUMPY using PIP
+# ---------- Install NUMPY using PIP and use it to make 4x4 arrays nested in array
 import numpy as np
 num_range = np.arange(16)
 reshaped = num_range.reshape(4, 4)
 print(reshaped)
+
+# ---------- API connection usando Request Package
+# https://jsonplaceholder.typicode.com/ 
+# https://jsonplaceholder.typicode.com/posts
+import requests
+import pprint
+
+api_data = requests.get("https://jsonplaceholder.typicode.com/posts")
+pprint.pprint(api_data.json()[0]["title"])
