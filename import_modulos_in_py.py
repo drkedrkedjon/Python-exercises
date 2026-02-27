@@ -24,4 +24,32 @@ import requests
 import pprint
 
 api_data = requests.get("https://jsonplaceholder.typicode.com/posts")
-pprint.pprint(api_data.json()[0]["title"])
+# pprint.pprint(api_data.json()[0]["title"])
+
+# ----------- Build web scrapper shit using some shity libraries
+# 1. download web page
+# 2. selectionar y extraer enlaces
+# 3. Convertir enlaces en Titulos
+
+import inflection
+from bs4 import BeautifulSoup
+
+
+def web_scrapper(url):
+  api_data = requests.get(url)
+  titles = []
+  
+  html_data = api_data.text
+  soup_data = BeautifulSoup(html_data, "html.parser")
+
+  for link in soup_data.find_all("a"):
+    href = link.get("href")
+    if href and href.startswith("/servicios/"):
+      slug = href.split("/servicios/")[-1].strip("/")
+      if slug:
+        title = inflection.titleize(slug.replace("-", " "))
+        titles.append(title)
+
+  return titles
+# print(web_scrapper("https://blancodent.com/servicios/servicios"))
+
