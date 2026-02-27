@@ -48,12 +48,31 @@ def greeet(**kwargs):
     print("Ups, shit happens")
 greeet(first = "Sasa", second="Savichi")
 
-# -------- 
+# -------- Combinar todos los tipos de argumentos en una function. El orden de args importa.
+def hello(time_of_day, *args, **kwargs):
+  print(f"Hi {" ".join(args)}, I hope you are well this {time_of_day}.")
+
+  if kwargs:
+    print("This is your task for today:")
+  for key, value in kwargs.items():
+    print(f"{key}: {value}")
+
+hello("morning",
+      "Sasa", "Pendejon", "Gonzales",
+      first = "Cagar",
+      second = "Cocinar",
+      third = "Terminar bici")
+
+
+
+
+# -------- LAMBDA FUNCTIONS
+
 
 # --------
 
-# --------
 
 # --------
+
 
 # --------
