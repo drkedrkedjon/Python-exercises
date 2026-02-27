@@ -11,4 +11,8 @@ print(greeting("Sasha"))
 print(modulos.helper.greeting("Sasha"))
 print(modulos.helper.shitting("Sasha"))
 
-# ---------- 
+# ---------- Install NUMPY using PIP
+import numpy as np
+num_range = np.arange(16)
+reshaped = num_range.reshape(4, 4)
+print(reshaped)
