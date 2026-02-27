@@ -63,14 +63,36 @@ hello("morning",
       second = "Cocinar",
       third = "Terminar bici")
 
+# -------- LAMBDA FUNCTIONS -> son functiones inline anonimas, parecidas a las arrow de JS
+set_name = lambda first, second: f"{first} {second}"
+# miArrow = (first, second) => `${first} ${second}` JS arrow version...
+print(set_name("Sasa", "Pendejon"))
 
+# -------- PRACTICE => In the code below, create a variable called "greeting" and assign it a lambda function that accepts a name as an argument, and return the string "Hi, name".
 
+def lambda_practice():
+  greeting = lambda name: f"Hi, {name}"
+  return greeting
 
-# -------- LAMBDA FUNCTIONS
+print(lambda_practice()("Caty")) # "lambda_practice" retorna "greeting" sin ejecutar la misma. Luego, imediatamente la ejecuta "greeting" con el argumento anidado.
 
+# -------- PRACTICE => FizzBuzz. Print de 1 a 100 y si es divisible por 3 print FIZZ, por 5 BUZZ y por ambos FIZZBUZZ
 
-# --------
+def fizz_buzz(min_num, max_num):
+  for num in range(min_num, max_num + 1):
+    fizz = num % 3 == 0
+    buzz = num % 5 == 0 
+    
+    if fizz and buzz:
+      print("FizzBuzz")
+    elif fizz:
+      print("Fizz")
+    elif buzz:
+      print("Buzz")
+    else:
+      print(num)
 
+fizz_buzz(1, 100)
 
 # --------
 
