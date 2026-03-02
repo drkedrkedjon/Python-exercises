@@ -66,7 +66,7 @@ print(new)
 old.extend(new)
 print(old)
 
-# -------------- Using list comprehension in PY
+# -------------- Using list comprehension in PY. Una manera consisa de crear una lista a base de otra en una linea de codigo.
 # Si el numero es par haz cuadrado y guarda en numbers array
 numbers = [ int(math.pow(number, 2)) for number in range(1,11) if number % 2 == 0]
 print(numbers)
