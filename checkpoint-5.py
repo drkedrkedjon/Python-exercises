@@ -41,3 +41,8 @@ if nombre in lista_nombre:
     print(f"El {nombre} SI esta en la lista de huespedes.")
 else:
     print(f"El {nombre} NO esta en la lista de huespedes.")
+
+
+palabras = ["estrella", "sol", "luna", "oceano"]
+ordenadas = sorted(palabras, key=lambda p: len(p))
+print(ordenadas)
