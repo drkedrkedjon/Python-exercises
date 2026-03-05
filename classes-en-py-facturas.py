@@ -84,3 +84,38 @@ obj = Example([1,2,3,4,5])
 # print(len(obj)) # Output is 5
 # print(repr(obj)) 
 
+# Crear un class iterarator manual. Display de nombre de equipos. Cada nuevo print imprime un nuevo jugador. Se hace de sta manera porque: By using __iter__ and __next__, your class can be used in for loops, comprehensions, and with next(), just like lists or other iterables. This only works because your class implements __iter__ and __next__. __iter__ and __next__ make your class compatible with Python’s iteration system, enabling powerful and flexible iteration patterns.
+equipo = ["Sasa", "Caty", "Clau", "Simba","Kobu"]
+
+class Equipo:
+  def __init__(self, personas):
+    self.personas = personas
+
+  def __iter__(self):
+     self.contador = 0
+     return self
+  
+  def __next__(self):
+     if self.contador < (len(self.personas) - 1):
+        jugador = self.personas[self.contador]
+        self.contador += 1
+        return jugador
+     elif self.contador == (len(self.personas) - 1):
+        jugador = self.personas[self.contador]
+        self.contador = 0
+        return jugador
+    #  else:
+        # raise StopIteration
+
+equipo_garcia = Equipo(equipo)
+process = iter(equipo_garcia)
+# print(next(process))
+# print(next(process))
+# print(next(process))
+# print(next(process))
+# print(next(process))
+# print(next(process))
+# print(next(process))
+# for jugador in equipo_garcia:
+#     print(jugador)
+
