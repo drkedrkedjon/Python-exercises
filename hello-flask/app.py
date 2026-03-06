@@ -74,13 +74,14 @@ def update_guide(id):
    return guide_schema.jsonify(guide)
 
 # Endpoint to DELETE an entree
-@app.route("/guides/<id>", methods=["DELETE"])
+@app.route("/guide/<id>", methods=["DELETE"])
 def delete_guide(id):
    guide = Guide.query.get(id)
    db.session.delete(guide)
    db.session.commit()
-
-   return guide_schema.jsonify(guide)
+   
+   return "Shit has been successifully deleted"
+  #  return guide_schema.jsonify(guide)
 
 
 if __name__ == "__main__":
