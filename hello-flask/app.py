@@ -47,6 +47,33 @@ def add_guide():
   guide = Guide.query.get(new_guide.id)
   return guide_schema.jsonify(guide)
 
+# Endpoint to GET ALL ENTREES
+@app.route("/guides", methods=["GET"] )
+def get_guides():
+   all_guides = Guide.query.all()
+   result = guides_schema.dump(all_guides)
+   return jsonify(result)
+
+# Endpoint for GET single guide
+@app.route("/guide/<id>", methods=["GET"] )
+def get_guide(id):
+   guide = Guide.query.get(id)
+   return guide_schema.jsonify(guide)
+
+# Endpoint to edit entree with "PUT"
+@app.route("/guide/<id>", methods=["PUT"])
+def update_guide(id):
+   guide = Guide.query.get(id)
+   title = request.json["title"]
+   content = request.json["content"]
+
+   guide.title = title
+   guide.content = content
+
+   db.session.commit()
+   return guide_schema.jsonify(guide)
+
+
 
 if __name__ == "__main__":
   app.run(debug=True)
