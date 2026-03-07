@@ -151,3 +151,11 @@ DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany
 db.books.deleteOne({ name: "Mongo DB" });
 db.books.deleteMany({ "authors.name": "Kobu" });
 ```
+
+## Query parte de string usando expresiones regulares
+
+```js
+db.books.find({
+  name: /.*db pro.*/i,
+});
+```
