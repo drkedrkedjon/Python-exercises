@@ -15,9 +15,9 @@ brew install mongodb-community@8.0`
 
 ### if not in mongosh
 
-mongosh
-`use admin
-db.<shutdownServer>()`
+mongosh `use admin`
+
+`db.shutdownServer()`
 
 MongoDB Documentation link https://www.mongodb.com/docs/v8.0/tutorial/install-mongodb-on-os-x/
 
