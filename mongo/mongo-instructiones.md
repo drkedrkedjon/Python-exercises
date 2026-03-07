@@ -89,7 +89,7 @@ db.books.insertMany([
 ]);
 ```
 
-## Query (solicitud a ver) todos documentos con find()
+## Query (solicitud a ver) todos documentos con `find()`
 
 `db.books.find()` Ahora devuelve .pretty() por defecto
 
@@ -128,7 +128,7 @@ db.books.find(
 );
 ```
 
-## Query un array nested usando $slice
+## Query un array nested usando `$slice`
 
 Slice usa la posicion en un array. 1 o 2 o -1 son indexes de array regular.
 
@@ -141,7 +141,7 @@ db.books.find({ name: "Caty en Bilbao" },
 );
 ```
 
-## Delete los documentos con .remove()
+## Delete los documentos con `.remove()`
 
 `db.books.remove({name: "Mongo DB"}, 1)`
 
@@ -158,4 +158,10 @@ db.books.deleteMany({ "authors.name": "Kobu" });
 db.books.find({
   name: /.*db pro.*/i,
 });
+```
+
+### Check si un field existe en un documento usando `$exist`
+
+```js
+db.books.find({ reviews: { $exists: true } });
 ```
