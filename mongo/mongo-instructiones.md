@@ -70,7 +70,7 @@ db.books.insertOne({
 Insert varios documentos:
 
 ```js
-db.books.insertManu([
+db.books.insertMany([
   {
     name: "Caty en Bilbao",
     publishedDate: new Date(),
@@ -97,16 +97,21 @@ db.books.insertManu([
 
 ## Query un documento especifico
 
-Comando .find() retorna uno o varios con la misma query.
-El mismo comando pero .findOne() retorna el primer
+Comando .find() retorna uno o varios documentos con la misma query.
+El mismo comando pero .findOne() retorna solo el primer documento.
+Si buscamos en algo nidado envolver en el string la llave `"key.key"
+: "algo"`
 
 ```js
 db.books.find({
   name: "Caty en Bilbao",
+  "authors.name": "Kobu",
 });
 ```
 
 ## MongoDB proyectiones
+
+### Elementos por incluir o no en una query
 
 Son queries con .find() donde enviamos el segundo objeto con campos que queremos que nos los devuelve. Osea, en un documento con 14 entradas podemos retornar solo las 2 solicitadas. Si no la queremos no la mencionamos menos ID cual si no queremos ponemos 0
 
@@ -118,7 +123,31 @@ db.books.find(
   {
     _id: 0,
     name: 1,
-    authors: 1,
+    "authors.name": 1,
   },
 );
+```
+
+## Query un array nested usando $slice
+
+Slice usa la posicion en un array. 1 o 2 o -1 son indexes de array regular.
+
+```js
+db.books.find({ name: "Caty en Bilbao" },
+  {
+    name: 1.
+    authors: { $slice: 1}
+  }
+);
+```
+
+## Delete los documentos con .remove()
+
+`db.books.remove({name: "Mongo DB"}, 1)`
+
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+
+```js
+db.books.deleteOne({ name: "Mongo DB" });
+db.books.deleteMany({ "authors.name": "Kobu" });
 ```
