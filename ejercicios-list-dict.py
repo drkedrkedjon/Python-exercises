@@ -41,3 +41,18 @@ my_list.sort()
 # Exercise 9: Use reassignment to add an element to your tuple.
 my_tuple += ("reasignado",)
 print(my_tuple)
+
+
+# Y por ultimo necesito que me hagas este ejercicio práctico de Python, y lo subas a Git-Hub o Replit para revisarlo
+# -Cree una clase de Python llamada Usuario que use el método init y cree un nombre de usuario y una contraseña. Crea un obj
+
+class Usuario:
+  def __init__(self, nombre, contraseña):
+    self.nombre = nombre
+    self.contraseña = contraseña
+
+  def __str__(self):
+    return f"Su nombre de usuario es: {self.nombre} y la contraseña es: {self.contraseña}"
+
+usuarioUno = Usuario("Caty", "123abc")
+print(usuarioUno)
