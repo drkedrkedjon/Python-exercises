@@ -1,5 +1,6 @@
 # ######## CONDITIONALES EN PY
 
+
 # --------
 age = 75
 if age < 25:
