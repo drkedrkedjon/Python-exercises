@@ -8,6 +8,7 @@ for persona in personas:
   print(persona)
 
 
+
 # -------------- FOR ... IN / for dictionarios
 personas = {
   "nombre": "sasa",
