@@ -6,6 +6,7 @@ my_set = {1, 2, 3, 4, 5, 20}
 query_one = 2 in my_set
 # print(query_one) # True
 
+
 # --------------- Metodos para unir dos set juntos
 tags1 = {"CSS", 'HTML', "JS", "HTML"}
 tags2 = {"REACT", 'HTML', "JS", "NEXT"}
