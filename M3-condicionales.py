@@ -10,6 +10,7 @@ else:
   print("Eres demasiado viejo canalla de mierda rota")
 
 
+
 # -------- Ternary operator en PY
 role = "admin"
 auth = "Puede ver panel" if role == "admin" else "No puedes ver el panel idiota"
