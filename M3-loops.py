@@ -70,3 +70,4 @@ print(old)
 # Si el numero es par haz cuadrado y guarda en numbers array
 numbers = [ int(math.pow(number, 2)) for number in range(1,11) if number % 2 == 0]
 print(numbers)
+
