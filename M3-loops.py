@@ -1,6 +1,7 @@
 import math
 ############### LOOPS EN PYTHON
 
+
 # -------------- FOR .. IN loop. Sirve para tuples, lists, dictionarios...
 personas = ("sasa", "clau", "caty", "simba", "kobu")
 personas = ["sasa", "clau", "caty", "simba", "kobu"]
